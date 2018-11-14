@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ttFont ttLibVersion="3.32">
+  <glyf>
+    <!-- The xMin, yMin, xMax and yMax values
+         will be recalculated by the compiler. -->
+    <TTGlyph sym="6" name="glyph00006" xMin="0" yMin="0" xMax="544" yMax="679">
+      <contour>
+        <pt x="438" y="379" on="1"/>
+        <pt x="491" y="348" on="0"/>
+        <pt x="544" y="250" on="0"/>
+        <pt x="544" y="193" on="1"/>
+        <pt x="544" y="105" on="0"/>
+        <pt x="414" y="2" on="0"/>
+        <pt x="305" y="2" on="1"/>
+        <pt x="175" y="2" on="0"/>
+        <pt x="42" y="155" on="0"/>
+        <pt x="42" y="306" on="1"/>
+        <pt x="42" y="417" on="0"/>
+        <pt x="110" y="586" on="0"/>
+        <pt x="238" y="679" on="0"/>
+        <pt x="325" y="679" on="1"/>
+        <pt x="399" y="679" on="0"/>
+        <pt x="497" y="605" on="0"/>
+        <pt x="532" y="540" on="1"/>
+        <pt x="539" y="526" on="0"/>
+        <pt x="539" y="518" on="1"/>
+        <pt x="539" y="504" on="0"/>
+        <pt x="515" y="485" on="0"/>
+        <pt x="491" y="485" on="0"/>
+        <pt x="478" y="496" on="0"/>
+        <pt x="467" y="511" on="1"/>
+        <pt x="447" y="545" on="0"/>
+        <pt x="414" y="586" on="0"/>
+        <pt x="358" y="616" on="0"/>
+        <pt x="318" y="616" on="1"/>
+        <pt x="223" y="616" on="0"/>
+        <pt x="115" y="456" on="0"/>
+        <pt x="112" y="312" on="1"/>
+        <pt x="139" y="356" on="0"/>
+        <pt x="248" y="409" on="0"/>
+        <pt x="308" y="409" on="1"/>
+        <pt x="384" y="409" on="0"/>
+      </contour>
+      <contour>
+        <pt x="428" y="102" on="1"/>
+        <pt x="467" y="139" on="0"/>
+        <pt x="467" y="194" on="1"/>
+        <pt x="467" y="231" on="0"/>
+        <pt x="434" y="301" on="0"/>
+        <pt x="364" y="346" on="0"/>
+        <pt x="311" y="346" on="1"/>
+        <pt x="242" y="346" on="0"/>
+        <pt x="141" y="278" on="0"/>
+        <pt x="141" y="208" on="1"/>
+        <pt x="141" y="143" on="0"/>
+        <pt x="227" y="65" on="0"/>
+        <pt x="389" y="65" on="0"/>
+      </contour>
+      <instructions/>
+    </TTGlyph>
+  </glyf>
+</ttFont>
