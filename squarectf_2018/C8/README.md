@@ -58,6 +58,7 @@ The steps here involve:
 You find this script [here](anal-ttf.py "anal-ttf.py")
 Before this would work I prepared a refernce directory containing only the contours of the glyf table of that font.
 
+#### GET stuff
 This is the code piece to get the ttf file:
 ```
 r = s.get(c8_url)
@@ -72,6 +73,7 @@ ttf.write(base64.b64decode(ttfb64))
 ttf.close()
 ```
 
+#### Analyze font
 You can then use fonttools ttLib to parse the file and access the tables. However I had trouble to get to the contours information via the lib so the (faster) workaround here was to use the **ttx** tool that comes with fonttools.
 
 ```
@@ -183,6 +185,7 @@ for x in eqstr:
     eqstr2 += code2sym[ord(x)]
 ```
 
+#### calc and submit
 and simply calculate using evil eval
 ```python
 result = eval(eqstr2)
@@ -194,6 +197,49 @@ r = s.post(c8_url, data = {'answer': str(result), 'token' : token})
 ```
 
 et voila
+```
+$ ./anal-ttf.py
+token:     1542154265
+Eq string: aaaaaY d aI B VNN B amc d GNN v aaV B mcN d aI v aG d am d YNNNNN d aaaao d GN d mcN d aao B oN v INN d amc v aaD d DN d aY v aaaG v YN d mcN d aX B GNNNNNNN B aamc d aaaI d DN B am d mNN d aaaX d mN d IN d INNN B aaaD B XN d amc d mNN v aaao v XN B aaX v bN d aD d oNNN d aamc d aaI d oN B YNN v mNNNNN
+analyzing ttf file: captchattf
+running system command: rm -rf ttx_out && mkdir ttx_out && ttx -t glyf -g -d ttx_out captchattf
+Dumping "captchattf" to "ttx_out/captchattf.ttx"...
+Dumping 'glyf' table...
+<fontTools.ttLib.tables._c_m_a_p.cmap_format_0 object at 0x7f6f0b39d668>
+code: 0x61 (a) - glyph00008
+code: 0x42 (B) - glyph00013
+code: 0x63 (c) - glyph00005
+code: 0x44 (D) - glyph00002
+code: 0x76 (v) - glyph00009
+code: 0x64 (d) - glyph00001
+code: 0x47 (G) - glyph00004
+code: 0x49 (I) - glyph00006
+code: 0x62 (b) - glyph00014
+code: 0x4e (N) - glyph00010
+code: 0x6d (m) - glyph00003
+code: 0x56 (V) - glyph00012
+code: 0x58 (X) - glyph00011
+code: 0x59 (Y) - glyph00015
+code: 0x6f (o) - glyph00007
+glyph00003 <--> 1 <--> 109
+glyph00010 <--> ) <--> 78
+glyph00004 <--> 4 <--> 71
+glyph00015 <--> 5 <--> 89
+glyph00008 <--> ( <--> 97
+glyph00005 <--> 0 <--> 99
+glyph00011 <--> 7 <--> 88
+glyph00006 <--> 2 <--> 73
+glyph00007 <--> 3 <--> 111
+glyph00013 <--> - <--> 66
+glyph00002 <--> 6 <--> 68
+glyph00014 <--> 9 <--> 98
+glyph00012 <--> 8 <--> 86
+glyph00009 <--> + <--> 118
+glyph00001 <--> * <--> 100
+(((((5 * (2 - 8)) - (10 * 4)) + ((8 - 10) * (2 + (4 * (1 * 5))))) * ((((3 * 4) * 10) * ((3 - 3) + 2)) * (10 + ((6 * 6) * (5 + (((4 + 5) * 10) * (7 - 4))))))) - ((10 * (((2 * 6) - (1 * 1)) * (((7 * 1) * 2) * 2))) - (((6 - 7) * (10 * 1)) + (((3 + 7) - ((7 + 9) * (6 * 3))) * ((10 * ((2 * 3) - 5)) + 1)))))
+-271143748
+```
+
 ```
 <html><body>
 <p>If you can see this then you have solved the CAPTCHA.</p>
