@@ -151,7 +151,7 @@ for row in range(len(flag)):
         for c, s in lookup.items():
             #print("lookup["+c+"] s:", s)
             #print("flag:   :", flag[row][col])
-            # s.replace(" ", "")
+            # ignore all spaces when doing the compare
             if s.replace(" ", "") in flag[row][col].replace(" ", ""):
                 sendme += c
                 break # v,x c,q 0,5,7,9,b,s f,h g,i these are duplicates
