@@ -32,7 +32,7 @@ And of course you do not have plenty of time to do so, so its necessary to scrip
 ### 1. Be Charvises
 Not for me
 
-### 3. OCR
+### 2. OCR
 I came up with this [script](get-page-as-image.py) and did also manual tweaking but the results were rather dissapointing and not very reliable. For example looked like this:
 ```
 «(1 x (10 + (9 + 4)))x<<<<<1o + e) + a) + (<3 x <6 — a» + (2 + (e x 4))» x (a + 3)) + (5 x ((4 x 7) x <2 x 4)))» x «(((e — ((6 +10)x
