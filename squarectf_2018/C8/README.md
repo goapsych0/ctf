@@ -56,7 +56,7 @@ The steps here involve:
 4. submit result
 
 You find this script [here](anal-ttf.py "anal-ttf.py")
-Before this would work I prepared a refernce directory containing only the contours of the glyf table of that font.
+Before this would work I prepared a refernce directory containing only the contours of the glyph table of that font.
 
 #### GET stuff
 This is the code piece to get the ttf file:
@@ -84,8 +84,8 @@ There's a number zero as well, you can see in the image below how thos glyphs mi
 ![glyphs](read_font_online_download_4_glyphs_Screenshot.png?raw=true)
 
 Looking at this, and I mentioned it earlier, what changes in the file here is which glyph gets assigned to which ID. But the relation between the glyph symbol itself and its contour is exactly the same all the time. Therefore if you generate the files from the glyph table with ttx command shown above you will get (almost) the exact same files.
-For the same glyph the will only differ in the name attribute.
-Show below are lines from those files were I added a **sym** attribute that will map the glyph sym to this file. Then we can do a lookup glyph contour to symbol.
+For the same glyph they will only differ in the name attribute.
+Shown below are lines from those files were I added a **sym** attribute that will map the glyph sym to this file. Then we can do a lookup glyph contour to symbol.
 
 
 ```
